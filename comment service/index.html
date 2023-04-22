@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/normalize.css" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Commentservice</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="commentservice">
+            <div class="commentsblock">
+                <p class="commentstext">Оставьте Ваш комментарий:</p>
+                
+                <form class="name" id="commentsform" >
+                    <div class="checkbox">
+                        <p class="openusername">Показывать Ваше ФИО?</p>
+                        <label for="click-yes">Yes</label>
+                            <input type="radio"  class="checkbox-yes" id="click-yes" name="anonym" value="yes" onclick="checkboxUsername();" checked>
+                        
+                        <label for="click-no">No </label>
+                            <input type="radio" name="anonym" class="checkbox-no" id="click-no" value="no" onclick="checkboxUsername();">
+                    </div>
+                    <label for="nametext" class="nametext" >Введите Ваши ФИО</label>
+                    <input id="nametext" class="username" type="text">
+                    <label for="link" class="avatartext">Введите ссылку Вашего аватара:</label>
+                    <input id="link" class="avatarlink"  type="text">
+                    <label for="commentsdown" class="commentsdown">Оставьте комментарий:</label>
+                    <textarea id="commentsdown" class="commentsfield" cols="40" rows="3"></textarea>
+                </form>  
+                <button class="submit" type="submit" onclick=submitForm()>Отправить</button> 
+            </div>    
+            <div class="chatblock">
+                <p class="chat-title">ЧАТ</p>
+                <div class="chat-display" id="comment-list"></div>
+            </div>    
+        </div>
+    </main>
+    
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
